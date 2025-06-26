@@ -1,0 +1,61 @@
+Bài 1:
+1. git commit --amend : mở trình chỉnh sửa commit gần nhất để sửa message commit
+2. git commit --amend -m"message" : câu lệnh rút gọn sửa message commit
+3. git restore --staged <file> : lệnh đưa file từ staging về local
+4. git reset Head~1 : lệnh undo 1 commit gần nhất
+Bài 2:
+a. Tạo 3 file: file1, file2, file3
+local : file1, file2, file 3
+b. Chạy lệnh: git init
+V1- working directory : file 1, file 2, file 3
+V2-staging:
+V3-Repository :
+c. Chạy lệnh: git commit -m”init project”
+V1- working directory : file 1, file 2, file 3
+V2-staging:
+V3-Repository :
+d. Chạy lệnh: git add file1
+V1- working directory :  file 2, file 3
+V2-staging:file1
+V3-Repository :
+e. Chạy lệnh: git commit -m”add file”
+V1- working directory :  file 2, file 3
+V2-staging:
+V3-Repository : file 1
+
+f. Chạy lệnh: git add .
+V1- working directory :
+V2-staging:file 2, file 3
+V3-Repository : file 1
+g. Chạy lệnh: git restore --staged file2
+V1- working directory :  file2
+V2-staging: file 3
+V3-Repository : file 1
+h. Chạy lệnh: git commit -m”add all files”
+V1- working directory :  file2
+V2-staging:
+V3-Repository : file 1, file 3
+i. Chạy lệnh: git reset HEAD~1
+V1- working directory :  file2
+V2-staging: file 3
+V3-Repository : file 1
+
+Bài 3:
+a. Chạy lệnh git init
+b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+V1- working directory : file1.txt, file2.txt, oops/file3.txt.
+V2-staging:
+V3-Repository :
+c. Thêm file .gitignore, thêm vào 2 dòng:
+V1- working directory : file1.txt, file2.txt, oops/file3.txt.
+V2-staging:
+V3-Repository :
+
+d. Chạy lệnh: git add .
+V1- working directory : file1.txt, oops/file3.txt.
+V2-staging:file2.txt
+V3-Repository :
+e. Chạy lệnh: git commit -m"init project"
+V1- working directory : file1.txt, oops/file3.txt.
+V2-staging:
+V3-Repository : file2.txt
