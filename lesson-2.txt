@@ -1,0 +1,31 @@
+
+Bài 1:
+git init : khởi tạo 1 project
+git add <file_name> : add 1 file lên staging
+git add . : add toàn bộ file
+git commit -m"message" : đẩy dữ liệu lên repo + kèm message (nên có convention )
+
+Bài 2 :
+ a. Tạo 3 file: file1, file2, file3
+b. Chạy lệnh: git init
+V1- working directory : file 1, file 2, file 3
+V2-staging:
+V3-Repository :
+
+c. Chạy lệnh: git commit -m”init project”
+V1- working directory : file 1, file 2, file 3
+V2-staging:
+V3-Repository :
+
+d. Chạy lệnh: git add file1
+V1- working directory : file 2, file 3
+V2-staging:file1
+V3-Repository :
+
+e. Chạy lệnh: git commit -m”add file1”
+V1- working directory : file 2, file 3
+V2-staging:
+V3-Repository : file 1
+
+f. Chạy lệnh: git add file
+không thực thi do không đúng tên file
